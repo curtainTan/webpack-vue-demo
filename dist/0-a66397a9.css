@@ -1,0 +1,206 @@
+.main-header {
+  text-align: center;
+}
+.main-header h1 {
+  font-size: 100px;
+  color: #fff;
+  font-weight: 300;
+  margin: 20px;
+}
+
+#footer {
+  margin-top: 100px;
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  text-shadow: 0 1px 0 #777;
+}
+
+.todo-item {
+  position: relative;
+  background-color: #fff;
+  font-size: 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.todo-item:hover .destroy:after {
+  content: '×';
+}
+.todo-item label {
+  white-space: pre-line;
+  word-break: break-all;
+  padding: 15px 60px 15px 15px;
+  margin-left: 45px;
+  display: block;
+  line-height: 1.2;
+  transition: color 0.4s;
+}
+.todo-item.completed label {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+.toggle {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.toggle:after {
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iLTEwIC0xOCAxMDAgMTM1Ij48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWRlZGVkIiBzdHJva2Utd2lkdGg9IjMiLz48L3N2Zz4=);
+}
+.toggle:checked:after {
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iLTEwIC0xOCAxMDAgMTM1Ij48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYmRkYWQ1IiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBmaWxsPSIjNWRjMmFmIiBkPSJNNzIgMjVMNDIgNzEgMjcgNTZsLTQgNCAyMCAyMCAzNC01MnoiLz48L3N2Zz4=);
+}
+.destroy {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  font-size: 30px;
+  color: #cc9a9a;
+  margin-bottom: 11px;
+  transition: color 0.2s ease-out;
+  background-color: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-width: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.helper {
+  font-weight: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  line-height: 30px;
+  background-color: #fff;
+  font-size: 14px;
+  font-smoothing: antialiased;
+}
+.left,
+.clear,
+.tabs {
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+.left,
+.clear {
+  width: 150px;
+}
+.left {
+  text-align: left;
+}
+.clear {
+  text-align: right;
+  cursor: pointer;
+}
+.clear span:hover {
+  font-weight: 700;
+}
+.tabs {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+.tabs * {
+  display: inline-block;
+  padding: 0 10px;
+  cursor: pointer;
+  border: 1px solid rgba(175,47,47,0);
+}
+.tabs *.actived {
+  border-color: rgba(175,47,47,0.4);
+  border-radius: 5px;
+}
+span:hover {
+  text-shadow: 1px 0 0;
+}
+
+.real-app {
+  width: 600px;
+  margin: 50px auto 0;
+  box-shadow: 0 0 5px #666;
+}
+.add-input {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  font-size: 24px;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1.4em;
+  border: 0;
+  outline: none;
+  color: inherit;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  padding: 16px 16px 16px 36px;
+  border: none;
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+}
+.none-items {
+  margin: 0;
+  width: 100%;
+  font-size: 24px;
+  font-family: inherit;
+  font-weight: inherit;
+  text-align: center;
+  line-height: 6rem;
+  background-color: #fff;
+}
+.have-items {
+  min-height: 6rem;
+  background-color: #fff;
+}
+
+#app {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+/* 背景虚化 */
+#cover {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #999;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-image: url(static-m2.jpg);
+  background-size: cover;
+  background-position: center;
+  font: 14px 'Helvetica microsoft Yahei';
+  color: #4d4d4d;
+  font-weight: 300;
+}
+
